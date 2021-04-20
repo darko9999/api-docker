@@ -34,22 +34,7 @@ services:
     volumes:
       - "./settings.json:/usr/src/api/config/settings.json"
       - "./healthcheck.js:/usr/src/api/healthcheck.js"
-  reverse-proxy:
-    command: "caddy reverse-proxy --from $API_HOSTNAME --to api:8080"
-    container_name: "xbs-reverse-proxy"
-    depends_on:
-      - "api"
-    image: "caddy:2.3.0-alpine"
-    ports:
-      - "443:443"
-      - "80:80"
-    restart: "unless-stopped"
-    volumes:
-      - "xbs-caddy-config:/config"
-      - "xbs-caddy-data:/data"
 
 volumes:
-  xbs-caddy-config:
-  xbs-caddy-data:
   xbs-db-backups:
   xbs-db-data:

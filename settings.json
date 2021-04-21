@@ -2,6 +2,11 @@
   "server" : {
 	  "behindProxy": true
   },
+  "log": {
+    "file": {
+      "enabled": false
+	}
+  },
   "db": {
     "host": "db"
   }

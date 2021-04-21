@@ -1,4 +1,7 @@
 {
+  "server" : {
+	  "behindProxy": true
+  },
   "db": {
     "host": "db"
   }

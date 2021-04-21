@@ -34,6 +34,8 @@ services:
     volumes:
       - "./settings.json:/usr/src/api/config/settings.json"
       - "./healthcheck.js:/usr/src/api/healthcheck.js"
+    ports:
+      - "8080:8080"
 
 volumes:
   xbs-db-backups:

@@ -16,6 +16,8 @@ services:
       - "xbs-db-data:/data/db"
       - "xbs-db-backups:/data/backups"
       - "./mongoconfig.js:/docker-entrypoint-initdb.d/mongoconfig.js"
+    ports:
+      - "27017:27017"
   api:
     container_name: "xbs-api"
     depends_on:

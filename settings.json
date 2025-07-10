@@ -1,17 +1,17 @@
 {
   "server" : {
-	  "behindProxy": true
+    "behindProxy": true
   },
   "log": {
     "file": {
       "enabled": false
-	}
+    }
   },
   "maxSyncSize": 5120000,
   "db": {
     "host": "db"
   },
   "status": {
-    "allowNewSyncs": false
+    "allowNewSyncs": true
   }
 }
